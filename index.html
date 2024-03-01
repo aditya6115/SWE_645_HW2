@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Survey Form</title>
+    <style>
+      body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            margin-left: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #180127;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        .form-control {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #0f1215;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 800px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+
+        button[type="reset"] {
+            background-color: #dc3545;
+            margin-left: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Student Survey Form</h1>
+    <form id="survey-form">
+      <!-- Text boxes -->
+      <div class="form-control">
+        <label for="first-name">First Name:</label>
+        <input
+          type="text"
+          id="first-name"
+          placeholder="Enter your first name"
+          required
+        />
+      </div>
+      <br />
+      <div class="form-control">
+        <label for="last-name">Last Name:</label>
+        <input
+          type="text"
+          id="last-name"
+          placeholder="Enter your last name"
+          required
+        />
+      </div>
+      <br />
+      <div class="form-control">
+        <label for="street-address">Street Address:</label>
+        <input
+          type="text"
+          id="Street Address"
+          placeholder="Enter your Address"
+          required
+        />
+      </div>
+      <br />
+      <div class="form-control">
+        <label for="city">City:</label>
+        <input type="text" id="city" placeholder="Enter your city" required />
+      </div>
+      <br />
+      <div class="form-control">
+        <label for="state">state:</label>
+        <input type="text" id="state" placeholder="Enter your state" required />
+      </div>
+      <br />
+      <div class="form-control">
+        <label for="zip-code">zip code:</label>
+        <input
+          type="number"
+          id="zip-code"
+          placeholder="Enter your zip-code"
+          required
+        />
+      </div>
+      <br />
+      <div class="form-control">
+        <label for="tel-num">Telephone no:</label>
+        <input
+          type="tel"
+          id="tel-num"
+          placeholder="Enter your mobile No"
+          required
+        />
+      </div>
+      <br />
+      <div class="form-control">
+        <label for="email">email:</label>
+        <input type="text" id="email" placeholder="Enter your email" required />
+      </div>
+      <br />
+      <div class="form-control">
+        <label for="survey-date">Date of Survey:</label>
+        <input type="date" id="survey-date" name="survey-date" required />
+      </div>
+      <br />
+
+      <!-- Checkboxes -->
+      <div class="form-control">
+        <label>What did you like most about the campus?</label>
+        <br />
+        <input type="checkbox" id="students" value="Students" />
+        <label for="students">Students</label>
+        <br />
+        <input type="checkbox" id="location" value="Location" />
+        <label for="location">Location</label>
+        <br />
+        <input type="checkbox" id="campus" value="Campus" />
+        <label for="campus">Campus</label>
+        <br />
+        <input type="checkbox" id="atmosphere" value="Atmosphere" />
+        <label for="atmosphere">Atmosphere</label>
+        <br />
+        <input type="checkbox" id="dorm-rooms" value="Dorm rooms" />
+        <label for="dorm-rooms">Dorm rooms</label>
+        <br />
+        <input type="checkbox" id="sports" value="Sports" />
+        <label for="sports">Sports</label>
+        <br />
+      </div>
+      <br />
+
+      <!-- Radio buttons -->
+      <div class="form-control">
+        <label>How did you become interested in the university?</label>
+        <br />
+        <input type="radio" id="friends" name="interest" value="Friends" />
+        <label for="friends">Friends</label>
+        <br />
+        <input
+          type="radio"
+          id="television"
+          name="interest"
+          value="Television"
+        />
+        <label for="television">Television</label>
+        <br />
+        <input type="radio" id="internet" name="interest" value="Internet" />
+        <label for="internet">Internet</label>
+        <br />
+        <input type="radio" id="other" name="interest" value="Other" />
+        <label for="other">Other</label>
+      </div>
+      <br />
+
+      <!-- Dropdown list -->
+      <div class="form-control">
+        <label for="recommendation"
+          >Likelihood of recommending this school:</label
+        >
+        <select id="recommendation">
+          <option value="Very Likely">Very Likely</option>
+          <option value="Likely">Likely</option>
+          <option value="Unlikely">Unlikely</option>
+        </select>
+      </div>
+      <br />
+
+      <!-- Additional text box for Raffle -->
+      <div class="form-control">
+        <label for="raffle"
+          >Enter comma-separated numbers (1-100) for the Raffle:</label
+        >
+        <input
+          type="text"
+          id="raffle"
+          placeholder="e.g., 5, 12, 30, ..."
+          required
+        />
+      </div>
+      <br />
+
+      <!-- Text area for additional comments -->
+      <div class="form-control">
+        <label for="comments">Additional Comments:</label>
+        <textarea
+          id="comments"
+          rows="4"
+          cols="50"
+          placeholder="Enter your comments"
+        ></textarea>
+      </div>
+      <br />
+
+      <!-- Submit and cancel buttons -->
+      <button type="submit">Submit</button>
+      <button type="reset">Cancel</button>
+    </form>
+  </body>
+</html>
